@@ -14,15 +14,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 mongoose.connect(MONGODB_URI || "mongodb://localhost:27017/todos", {useUnifiedTopology: true, useFindAndModify: true, useNewUrlParser: true})
 
-// ////Seed Route////
-// app.get('/todos/seed', (req, res)=> {
-//     ToDo.create({
-//         item: []
-//     }),
-//     (err, newTodo)=> {
-//         res.redirect('/todos')
-//     }
-// } )
+
 
 ////Index Route////
 app.get('/todos', (req, res) => {
@@ -37,6 +29,10 @@ app.get('/todos', (req, res) => {
         }
     })
 })
+////Reroot Route////
+app.get('/' , (req, res) => {
+    res.redirect('/todos');
+  });
 
 ////Create Route////
 app.post('/todos', (req, res) => {
