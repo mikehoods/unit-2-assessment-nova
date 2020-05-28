@@ -1,3 +1,11 @@
+## Notes
+
+Got off to a bad start and things just seemed to get worse. It took me a good chunk of time trying to figure out why my ToDo List was adding blank lines. Finally figured out what that 'express.urlencoded' middleware was doing. That just got me really frustrated, and then I had trouble making sense of the diretions (wasn't sure if I was supposed to be creating a new object for each todo item or pushing them to an array within one main todo object). I went back and forth on that and lost more time. Ultimately, I got the todo list to add items, but the delete button is not working. Heroku was also giving me problems, and I still can't figure out why. Spent some time trying to debug that to no avail. 
+
+Here's the GitHub link to what I do have:
+
+https://github.com/mikehoods/unit-2-assessment-nova
+
 <img src="https://i.imgur.com/ser5chI.png">
 
 # Project 2 Assessment
@@ -167,5 +175,4 @@ Follow these steps to deploy your app:
 **Slack the deployed app's link to your instructors in the resources channel. Congrats, you are done!**
 
 **If you cant get heroku to work, send us your repo that works locally.
-
 
