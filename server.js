@@ -52,6 +52,6 @@ app.delete('/todos', (req, res)=> {
     })
 })
 ////Listener////
-app.listen(port, (req, res)=> {
+app.listen(3000, (req, res)=> {
     console.log("Get ready to do stuff!")
 })
