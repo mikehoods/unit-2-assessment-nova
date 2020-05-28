@@ -5,13 +5,14 @@ const methodOverrive = require('method-override')
 const app = express()
 const port = 3000
 const ToDo = require('./models/todos.js')
+MONGODB_URI = "mongodb://heroku_h923hvtf:jopquflt0lg6dog73spbo6i1dp@ds111562.mlab.com:11562/heroku_h923hvtf"
 
 ////Middleware////
 app.use(express.urlencoded({extended: false}))
 app.use(methodOverrive('_method'))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
-mongoose.connect('mongodb://localhost:27017/todos', {useUnifiedTopology: true, useFindAndModify: true, useNewUrlParser: true})
+mongoose.connect(MONGODB_URI || "mongodb://localhost:27017/todos", {useUnifiedTopology: true, useFindAndModify: true, useNewUrlParser: true})
 
 // ////Seed Route////
 // app.get('/todos/seed', (req, res)=> {
